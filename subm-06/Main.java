@@ -8,14 +8,9 @@ public class Main {
     public static String cornerChar = "+";
     public static String lineBreak = "\n";
 
-    public static String fromName = "$NAME";
-    public static String toName = "$NAME";
-
-    public static String fromAddress = "$ADDRESS";
-    public static String toAddress = "$ADDRESS";
-
-    public static String fromZipCodeAndCity = "$ZIP $CITY";
-    public static String toZipCodeAndCity = "$ZIP $CITY";
+    public static String fromName = "$NAME", toName = "$NAME";
+    public static String fromAddress = "$ADDRESS", toAddress = "$ADDRESS";
+    public static String fromZipCodeAndCity = "$ZIP $CITY", toZipCodeAndCity = "$ZIP $CITY";;
 
     public static void header() {
         System.out.print(cornerChar);
