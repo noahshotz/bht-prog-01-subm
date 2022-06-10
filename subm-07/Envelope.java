@@ -13,6 +13,6 @@ public class Envelope {
     String fromZipCodeAndCity = "13353 Berlin";
     
     public void printEnvelope(Student[] toStudents) {
-
+        System.out.println("test @ envelope");
     }
 }
