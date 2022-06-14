@@ -39,13 +39,13 @@ public class Main {
         System.out.print(borderVerticalChar + lineBreak);
     }
 
-    public static void senderAddress(String fromAdress) {
+    public static void senderAddress(String fromAddress) {
         System.out.print(borderVerticalChar);
         for (int padL = 0; padL < padding; padL++) {
             System.out.print(spaceChar);
         }
-        System.out.print(fromAdress);
-        for (int padR = padding + fromAdress.length(); padR < (width - 2); padR++) {
+        System.out.print(fromAddress);
+        for (int padR = padding + fromAddress.length(); padR < (width - 2); padR++) {
             System.out.print(spaceChar);
         }
         System.out.print(borderVerticalChar + lineBreak);
