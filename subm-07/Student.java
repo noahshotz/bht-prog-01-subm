@@ -1,13 +1,6 @@
 public class Student {
 
-    private String prename;
-    private String surname;
-    private String street;
-    private String houseNumber;
-    private String zipCode;
-    private String city;
-    private String registrationNumber;
-    private String course;
+    private String prename, surname, street, houseNumber, zipCode, city, registrationNumber, course;
     
     public Student(String prename, String surname, String street, String houseNumber, String zipCode, String city, String registrationNumber, String course) {
         this.prename = prename;
@@ -19,7 +12,6 @@ public class Student {
         this.registrationNumber = registrationNumber;
         this.course = course;
     }
-    
     public String getName(){
         return prename + " " + surname;
     }
@@ -38,5 +30,4 @@ public class Student {
     public String toString() {
         return prename + " " + surname + " " + "(" + registrationNumber + ")" + "," + " " + course;
     }
-    
 }
