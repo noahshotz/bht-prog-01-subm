@@ -8,7 +8,7 @@ public class Main {
     public static String cornerChar = "+";
     public static String lineBreak = "\n";
 
-    // custom vari
+    // custom vars
     public static String fromName = "$NAME", toName = "$NAME";
     public static String fromAddress = "$ADDRESS", toAddress = "$ADDRESS";
     public static String fromZipCodeAndCity = "$ZIP $CITY", toZipCodeAndCity = "$ZIP $CITY";;
