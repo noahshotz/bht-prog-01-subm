@@ -42,7 +42,7 @@ public class Envelope {
             System.out.print(spaceChar);
         }
         System.out.print(fromName);
-        for (int i = padding + fromName.length(); i < (width - 2); d++) {
+        for (int i = padding + fromName.length(); i < (width - 2); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(borderVerticalChar + lineBreak);
@@ -88,7 +88,7 @@ public class Envelope {
             System.out.print(spaceChar);
         }
         System.out.print(toName);
-        for (int i = 0; d < padding; i++) {
+        for (int i = 0; i < padding; i++) {
             System.out.print(spaceChar);
         }
         System.out.print(borderVerticalChar + lineBreak); 
@@ -171,17 +171,17 @@ public class Envelope {
         }
         System.out.print(borderVerticalChar + lineBreak);
     }
-        
+
     public void printEnvelope(Student[] toStudents) {
         for(int i = 0; i < toStudents.length; i++){    
             header();
             emptyLine();
             senderData(fromName, fromAddress, fromZipCodeAndCity);
             emptyLine();
-            receiverData(toStudents[i].getPrename() + " " + toStudents[i].getSurname(),
-                         toStudents[i].getStreet() + " " + toStudents[i].getHouseNumber(),
-                         toStudents[i].getZipCode() + " " + toStudents[i].getCity());
-                         emptyLine();
+            receiverData(toStudents[i].getName(),
+                         toStudents[i].getAddress(),
+                         toStudents[i].getZipCodeAndCity());
+            emptyLine();
             header();
         }
     }

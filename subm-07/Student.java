@@ -20,23 +20,14 @@ public class Student {
         this.course = course;
     }
     
-    public String getPrename(){
-        return prename;
+    public String getName(){
+        return prename + " " + surname;
     }
-    public String getSurname(){
-        return surname;
+    public String getAddress(){
+        return street + " " + houseNumber;
     }
-    public String getStreet(){
-        return street;
-    }
-    public String getHouseNumber(){
-        return houseNumber;
-    }
-    public String getZipCode(){
-        return zipCode;
-    }
-    public String getCity(){
-        return city;
+    public String getZipCodeAndCity(){
+        return zipCode + " " + city;
     }
     public String getRegistrationNumber(){
         return registrationNumber;
