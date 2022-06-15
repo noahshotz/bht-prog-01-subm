@@ -1,5 +1,4 @@
 public class Envelope {
-
     int width = 60;
     int padding = 3;
     String spaceChar = " ";
@@ -72,6 +71,12 @@ public class Envelope {
         System.out.print(borderVerticalChar + lineBreak);
     }
 
+    public void strTest(String toName) {
+        System.out.println("");
+        System.out.println("Test: " + toName);
+        System.out.println("");
+    }
+
     public void receiverData() {
         if (toName.length() > toAddress.length() && toName.length() > toZipCodeAndCity.length()) {
             toNameIsLongest();
@@ -82,7 +87,7 @@ public class Envelope {
         }
     }
 
-    public void toNameIsLongest() {
+    public void toNameIsLongest(String toName, String toAddress, String toZipCodeAndCity) {
         // from name
         System.out.print(borderVerticalChar);
         padding();

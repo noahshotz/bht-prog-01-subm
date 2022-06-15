@@ -32,6 +32,7 @@ public class Main {
     }
 
     /////////////////// sender ///////////////////
+    // return sender name
     public static void senderName(String fromName) {
         System.out.print(borderVerticalChar);
         for (int padL = 0; padL < padding; padL++) {
@@ -44,6 +45,7 @@ public class Main {
         System.out.print(borderVerticalChar + lineBreak);
     }
 
+    // return sender address
     public static void senderAddress(String fromAddress) {
         System.out.print(borderVerticalChar);
         for (int padL = 0; padL < padding; padL++) {
@@ -56,6 +58,7 @@ public class Main {
         System.out.print(borderVerticalChar + lineBreak);
     }
 
+    // return sender zip code and city
     public static void senderZipCodeAndCity(String fromZipCodeAndCity) {
         System.out.print(borderVerticalChar);
         for (int padL = 0; padL < padding; padL++) {
@@ -68,6 +71,7 @@ public class Main {
         System.out.print(borderVerticalChar + lineBreak);
     }
 
+    // build sender data  method
     public static void senderData(String fromName, String fromAddress, String fromZipCodeAndCity) {
         senderName(fromName);
         senderAddress(fromAddress);
@@ -75,6 +79,7 @@ public class Main {
     }
 
     /////////////////// receiver ///////////////////
+    // conditions for longest method
     public static void toNameisLongest(String toName, String toAddress, String toZipCodeAndCity) {
         System.out.print(borderVerticalChar);
         // name
