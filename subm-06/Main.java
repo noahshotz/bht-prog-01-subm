@@ -1,4 +1,5 @@
 public class Main {
+    // given vars
     public static int width = 60;
     public static int padding = 3;
     public static String spaceChar = " ";
@@ -6,10 +7,13 @@ public class Main {
     public static String borderVerticalChar = "|";
     public static String cornerChar = "+";
     public static String lineBreak = "\n";
+
+    // custom vari
     public static String fromName = "$NAME", toName = "$NAME";
     public static String fromAddress = "$ADDRESS", toAddress = "$ADDRESS";
     public static String fromZipCodeAndCity = "$ZIP $CITY", toZipCodeAndCity = "$ZIP $CITY";;
 
+    // build upper and lower border
     public static void header() {
         System.out.print(cornerChar);
         for (int wH = 0; wH < (width - 2); wH++) {
@@ -18,6 +22,7 @@ public class Main {
         System.out.print(cornerChar + lineBreak);
     }
 
+    // build empty line between data rows
     public static void emptyLine() {
         System.out.print(borderVerticalChar);
         for (int wS = 0; wS < (width - 2); wS++) {
