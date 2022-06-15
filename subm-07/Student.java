@@ -1,24 +1,51 @@
 public class Student {
 
-    private String fullName;
-    private String fullAddress;
-    private String fullZipCodeAndCity;
-
-    public Student(String prename, String surname, String street, String houseNumber, String zipCode, String city,
-            String registrationNumber, String course) {
-        fullName = prename + " " + surname;
-        fullAddress = street + " " + houseNumber;
-        fullZipCodeAndCity = zipCode + " " + city;
+    private String prename;
+    private String surname;
+    private String street;
+    private String houseNumber;
+    private String zipCode;
+    private String city;
+    private String registrationNumber;
+    private String course;
+    
+    public Student(String prename, String surname, String street, String houseNumber, String zipCode, String city, String registrationNumber, String course) {
+        this.prename = prename;
+        this.surname = surname;
+        this.street = street;
+        this.houseNumber = houseNumber;
+        this.zipCode = zipCode;
+        this.city = city;
+        this.registrationNumber = registrationNumber;
+        this.course = course;
     }
-
-    public String getFullName() {
-        return fullName;
+    
+    public String getPrename(){
+        return prename;
     }
-    public String getFullAddress() {
-        return fullAddress;
+    public String getSurname(){
+        return surname;
     }
-    public String getFullZipCodeAndCity() {
-        return fullZipCodeAndCity;
+    public String getStreet(){
+        return street;
     }
-
+    public String getHouseNumber(){
+        return houseNumber;
+    }
+    public String getZipCode(){
+        return zipCode;
+    }
+    public String getCity(){
+        return city;
+    }
+    public String getRegistrationNumber(){
+        return registrationNumber;
+    }
+    public String getCourse(){
+        return course;
+    }
+    public String toString() {
+        return prename + " " + surname + " " + "(" + registrationNumber + ")" + "," + " " + course;
+    }
+    
 }
