@@ -16,7 +16,7 @@ public class Envelope {
 
     public static void header() {
         System.out.print(cornerChar);
-        for (int wH = 0; wH < (width - 2); wH++) {
+        for (int i = 0; i < (width - border); i++) {
             System.out.print(borderHorizontalChar);
         }
         System.out.print(cornerChar + lineBreak);
@@ -24,7 +24,7 @@ public class Envelope {
 
     public static void emptyLine() {
         System.out.print(borderVerticalChar);
-        for (int wS = 0; wS < (width - 2); wS++) {
+        for (int wS = 0; wS < (width - border); wS++) {
             System.out.print(spaceChar);
         }
         System.out.print(borderVerticalChar + lineBreak);
@@ -42,7 +42,7 @@ public class Envelope {
             System.out.print(spaceChar);
         }
         System.out.print(fromName);
-        for (int i = padding + fromName.length(); i < (width - 2); i++) {
+        for (int i = padding + fromName.length(); i < (width - border); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(borderVerticalChar + lineBreak);
@@ -54,7 +54,7 @@ public class Envelope {
             System.out.print(spaceChar);
         }
         System.out.print(fromAdress);
-        for (int i = padding + fromAdress.length(); i < (width - 2); i++) {
+        for (int i = padding + fromAdress.length(); i < (width - border); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(borderVerticalChar + lineBreak);
@@ -66,7 +66,7 @@ public class Envelope {
             System.out.print(spaceChar);
         }
         System.out.print(fromZipCodeAndCity);
-        for (int i = padding + fromZipCodeAndCity.length(); i < (width - 2); i++) {
+        for (int i = padding + fromZipCodeAndCity.length(); i < (width - border); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(borderVerticalChar + lineBreak); 
@@ -84,25 +84,23 @@ public class Envelope {
     
     public static void toNameIsLongest(String toName, String toAddress, String toZipCodeAndCity) {
         System.out.print(borderVerticalChar);
-        for (int i = padding + toName.length(); i < (width - 2); i++) {
+        for (int i = padding + toName.length(); i < (width - border); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toName);
         for (int i = 0; i < padding; i++) {
             System.out.print(spaceChar);
         }
-        System.out.print(borderVerticalChar + lineBreak); 
-        System.out.print(borderVerticalChar);
-        for (int i = padding + toAddress.length(); i < (width - 2 - (toName.length() - toAddress.length())); i++) {
+        System.out.print(borderVerticalChar + lineBreak + borderVerticalChar); 
+        for (int i = padding + toAddress.length(); i < (width - border - (toName.length() - toAddress.length())); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toAddress);
         for (int i = 0; i < padding + (toName.length() - toAddress.length()); i++) {
             System.out.print(spaceChar);
         }
-        System.out.print(borderVerticalChar + lineBreak); 
-        System.out.print(borderVerticalChar);
-        for (int i = padding + toZipCodeAndCity.length(); i < (width - 2 - (toName.length() - toZipCodeAndCity.length())); i++) {
+        System.out.print(borderVerticalChar + lineBreak + borderVerticalChar); 
+        for (int i = padding + toZipCodeAndCity.length(); i < (width - border - (toName.length() - toZipCodeAndCity.length())); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toZipCodeAndCity);
@@ -114,25 +112,23 @@ public class Envelope {
 
     public static void toAddressIsLongest(String toName, String toAddress, String toZipCodeAndCity) {
         System.out.print(borderVerticalChar);
-        for (int i = padding + toName.length(); i < (width - 2 - (toAddress.length() - toName.length())); i++) {
+        for (int i = padding + toName.length(); i < (width - border - (toAddress.length() - toName.length())); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toName);
         for (int i = 0; i < padding + (toAddress.length() - toName.length()); i++) {
             System.out.print(spaceChar);
         }
-        System.out.print(borderVerticalChar + lineBreak); 
-        System.out.print(borderVerticalChar);
-        for (int i = padding + toAddress.length(); i < (width - 2); i++) {
+        System.out.print(borderVerticalChar + lineBreak + borderVerticalChar); 
+        for (int i = padding + toAddress.length(); i < (width - border); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toAddress);
         for (int i = 0; i < padding; i++) {
             System.out.print(spaceChar);
         }
-        System.out.print(borderVerticalChar + lineBreak); 
-        System.out.print(borderVerticalChar);
-        for (int i = padding + toZipCodeAndCity.length(); i < (width - 2 - (toAddress.length() - toZipCodeAndCity.length())); i++) {
+        System.out.print(borderVerticalChar + lineBreak + borderVerticalChar); 
+        for (int i = padding + toZipCodeAndCity.length(); i < (width - border - (toAddress.length() - toZipCodeAndCity.length())); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toZipCodeAndCity);
@@ -144,25 +140,23 @@ public class Envelope {
 
     public static void toZipCodeAndCityIsLongest(String toName, String toAddress, String toZipCodeAndCity) {
         System.out.print(borderVerticalChar);
-        for (int i = padding + toName.length(); i < (width - 2 - (toZipCodeAndCity.length() - toName.length())); i++) {
+        for (int i = padding + toName.length(); i < (width - border - (toZipCodeAndCity.length() - toName.length())); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toName);
         for (int i = 0; i < padding + (toZipCodeAndCity.length() - toName.length()); i++) {
             System.out.print(spaceChar);
         }
-        System.out.print(borderVerticalChar + lineBreak); 
-        System.out.print(borderVerticalChar);
-        for (int i = padding + toAddress.length(); i < (width - 2 - (toZipCodeAndCity.length() - toAddress.length())); i++) {
+        System.out.print(borderVerticalChar + lineBreak + borderVerticalChar); 
+        for (int i = padding + toAddress.length(); i < (width - border - (toZipCodeAndCity.length() - toAddress.length())); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toAddress);
         for (int i = 0; i < padding + (toZipCodeAndCity.length() - toAddress.length()); i++) {
             System.out.print(spaceChar);
         }
-        System.out.print(borderVerticalChar + lineBreak); 
-        System.out.print(borderVerticalChar);
-        for (int i = padding + toZipCodeAndCity.length(); i < (width - 2); i++) {
+        System.out.print(borderVerticalChar + lineBreak + borderVerticalChar); 
+        for (int i = padding + toZipCodeAndCity.length(); i < (width - border); i++) {
             System.out.print(spaceChar);
         }
         System.out.print(toZipCodeAndCity);
