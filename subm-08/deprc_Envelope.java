@@ -1,4 +1,4 @@
-public class Envelope {
+public class deprc_Envelope {
 
     public static int width = 60;
     public static int border = 2;

@@ -1,6 +1,6 @@
 package student;
 
-public class studentEnum {
+public class StudyCourse {
 
     enum StudyCourse {
         MEDIENINFORMATIK,
