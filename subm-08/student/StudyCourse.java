@@ -2,7 +2,7 @@ package student;
 
 public class StudyCourse {
 
-    enum StudyCourse {
+    enum studycourse {
         MEDIENINFORMATIK,
         MEDIENINFORMATIK_ONLINE,
         TECHNISCHE_INFORMATIK,
