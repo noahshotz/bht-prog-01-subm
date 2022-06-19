@@ -2,11 +2,14 @@ package student;
 
 public class Student {
 
-    private String prename, surname, street, houseNumber, zipCode, city, registrationNumber, course;
+    private String prename, surname, street, houseNumber, zipCode, city, registrationNumber;
+    private int age;
+    private StudyCourse course;
     
-    public Student(String prename, String surname, String street, String houseNumber, String zipCode, String city, String registrationNumber, String course) {
+    public Student(String prename, String surname, int age, String street, String houseNumber, String zipCode, String city, String registrationNumber, StudyCourse course) {
         this.prename = prename;
         this.surname = surname;
+        this.age = age;
         this.street = street;
         this.houseNumber = houseNumber;
         this.zipCode = zipCode;
@@ -17,6 +20,9 @@ public class Student {
     public String getName(){
         return prename + " " + surname;
     }
+    public int getAge(){
+        return age;
+    }
     public String getAddress(){
         return street + " " + houseNumber;
     }
@@ -26,10 +32,10 @@ public class Student {
     public String getRegistrationNumber(){
         return registrationNumber;
     }
-    public String getCourse(){
+    public StudyCourse getStudyCourse(){
         return course;
     }
     public String toString() {
-        return prename + " " + surname + " " + "(" + registrationNumber + ")" + "," + " " + course;
+        return prename + " " + surname + " " + age + " " + "(" + registrationNumber + ")" + "," + " " + course;
     }
 }

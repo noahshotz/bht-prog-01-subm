@@ -9,6 +9,5 @@ public class StudyCourse {
         DRUCK_UND_MEDIENTECHNIK,
         SCREEN_BASED_MEDIA
     }
-
     
 }
