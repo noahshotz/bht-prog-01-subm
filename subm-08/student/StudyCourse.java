@@ -7,5 +7,5 @@ public class StudyCourse {
         TECHNISCHE_INFORMATIK,
         DRUCK_UND_MEDIENTECHNIK,
         SCREEN_BASED_MEDIA
-    }    
+    }
 }

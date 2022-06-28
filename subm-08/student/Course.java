@@ -2,8 +2,8 @@ package student;
 
 public class Course {
 
-    String name;
-    String teacher;
+    private String name;
+    private String teacher;
 
     public Course(String name, String teacher) {
         this.name = name;
