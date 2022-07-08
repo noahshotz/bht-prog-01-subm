@@ -1,5 +1,8 @@
 package ticketmachine;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Random;
 
 public class TicketMachine {
@@ -22,7 +25,7 @@ public class TicketMachine {
             Random rand = new Random();
             int val = rand.nextInt(4) + 1;
             if (val == 1) {
-                System.out.println("You have not been busted today, Mr " + i);
+                // enjoy your luck
             } else {
                 String[] testmes = testdata[i].split(";|,");
                 for (int k = 0; k < testmes.length; k++) {
@@ -41,10 +44,18 @@ public class TicketMachine {
                     }
                 }
 
+                //System.out.println(start);
+                LocalDateTime tStart = LocalDateTime.parse(start);
+                //System.out.println(end);
+                LocalDateTime tEnd = LocalDateTime.parse(end);
+                long seconds = ChronoUnit.SECONDS.between(tStart, tEnd);
+                //System.out.println(seconds);
+                long speed = distance / seconds;
+
                 System.out.println(
-                        "Car with badge " + badge + 
-                        " was speeding at " + (distance * 3.6) +        // implement method for speed calculation 
-                        "km/h. Sending a ticket.");
+                        "Car with badge " + badge +
+                                " was speeding at " + speed + // implement method for speed calculation
+                                " km/h. Sending a ticket.");
             }
         }
     }
