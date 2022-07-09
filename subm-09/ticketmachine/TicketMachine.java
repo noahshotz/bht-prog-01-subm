@@ -1,13 +1,13 @@
 package ticketmachine;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
+//import java.time.LocalDateTime;
+//import java.time.temporal.ChronoUnit;
 import java.util.Random;
 
 public class TicketMachine {
 
     String badge, start, end;
-    int distance;
+    int distance, count;
 
     public TicketMachine() {
         // do nothing?
@@ -23,9 +23,9 @@ public class TicketMachine {
             // get random
             Random rand = new Random();
             int val = rand.nextInt(4) + 1;
-            if (val == 1) {
-                // enjoy your luck
-            } else {
+            //System.out.println("random val:" + val);
+            // 75% situation
+            if (val != 1) { 
                 String[] testmes = testdata[i].split(";|,");
                 for (int k = 0; k < testmes.length; k++) {
                     if (k == 0) {
@@ -43,19 +43,21 @@ public class TicketMachine {
                     }
                 }
 
-                //System.out.println(start);
-                LocalDateTime tStart = LocalDateTime.parse(start);
-                //System.out.println(end);
-                LocalDateTime tEnd = LocalDateTime.parse(end);
-                long seconds = ChronoUnit.SECONDS.between(tStart, tEnd);
-                //System.out.println(seconds);
-                long speed = distance / seconds;
+                //LocalDateTime tStart = LocalDateTime.parse(start);
+                //LocalDateTime tEnd = LocalDateTime.parse(end);
+                //long seconds = ChronoUnit.SECONDS.between(tStart, tEnd);
+                //long speed = distance / seconds;
+                double speed = distance * 3.6;
 
-                System.out.println(
-                        "Car with badge " + badge +
-                                " was speeding at " + speed + // implement method for speed calculation
-                                " km/h. Sending a ticket.");
+                if (speed > 50.0) {
+                    System.out.println(
+                            "Car with badge " + badge +
+                                    " was speeding at " + speed +
+                                    " km/h. Sending a ticket.");
+                    count++;
+                }
             }
         }
+        System.out.println("Number of tickets: " + count);
     }
 }
