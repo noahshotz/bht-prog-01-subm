@@ -4,8 +4,8 @@ public class Main {
     public static void main(String [] args) {
         String input = 
             "badge     ; start               ; end                 ; distance\n"
-          + "D-HF 2345 ; 2000-01-23T11:22:33 ; 2000-01-23T12:22:33 ; 1000\n"
-          + "B-AT 6724 ; 2001-03-12T00:00:00 ; 2001-03-12T00:01:00 ; 800\n"
+          + "D-HF 2345 ; 2000-01-23T11:22:33 ; 2000-01-23T12:22:33 ; 1000\n"    // zeile 1
+          + "B-AT 6724 ; 2001-03-12T00:00:00 ; 2001-03-12T00:01:00 ; 800\n"     // zeile 1
           + "B-KE 6724 ; 2012-01-08T15:22:04 ; 2012-01-08T15:22:44 ; 800\n"
           + "B-HE 332  ; 2012-08-08T15:22:04 ; 2012-08-08T15:22:44 ; 800\n"
           + "G-AT 3343 ; 2012-12-22T15:22:04 ; 2012-12-22T15:22:44 ; 800\n"
@@ -15,7 +15,6 @@ public class Main {
           + "F-FT 9335 , 2012-01-08T15:22:04 , 2012-01-08T15:22:44 ; 800"  // wrong delimiter (command instead of semicolon)
           + "\n"                                                           // extra line
           ;
-          
         TicketMachine tm = new TicketMachine();
         tm.createTickets(input);
     }
