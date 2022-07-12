@@ -1,7 +1,4 @@
 package ticketmachine;
-
-//import java.time.LocalDateTime;
-//import java.time.temporal.ChronoUnit;
 import java.util.Random;
 
 public class TicketMachine {
@@ -12,26 +9,23 @@ public class TicketMachine {
     public TicketMachine() {
         // do nothing?
     }
-
     public void createTickets(String measurements) {
         String[] radarArr = measurements.split("\n");
 
         int ttc = 0; // ttc = total transit count
-
+        // empty string init
         String measurementsCleaned = "";
         String badgesOnly = "";
-
-
+        
+        // start the loop
         for (int i = 1; i < radarArr.length; i++) {
             if (!radarArr[i].contains(",")) {
                 ttc++;
                 // get random
                 Random rand = new Random();
                 int val = rand.nextInt(4) + 1;
-                // System.out.println("random val:" + val);
                 // 75% situation
                 if (val != 1) {
-
                     String[] radarRowArr = radarArr[i].split(";|,");
                     for (int k = 0; k < radarRowArr.length; k++) {
                         if (k == 0) {
@@ -49,13 +43,7 @@ public class TicketMachine {
                             distance = Integer.parseInt(distanceRaw);
                         }
                     }
-
-                    // LocalDateTime tStart = LocalDateTime.parse(start);
-                    // LocalDateTime tEnd = LocalDateTime.parse(end);
-                    // long seconds = ChronoUnit.SECONDS.between(tStart, tEnd);
-                    // long speed = distance / seconds;
                     double speed = distance * 3.6;
-
                     if (speed > 50.0 && !badgesOnly.contains(badge+badge)) {
                         measurementsCleaned = measurementsCleaned +
                         "Car with badge '" + badge + "'" +
