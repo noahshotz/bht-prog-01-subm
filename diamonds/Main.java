@@ -1,15 +1,14 @@
 public class Main {
+    // change diamond size here
     static int diamondSize = 5;
 
     public static void main(String args[]) {
-
         // top half of diamond
         for (int i = 0; i <= diamondSize; i++) {
             if (i % 2 != 0) {
                 printDiamond(i);
             }
         }
-
         // bottom half of diamond
         for (int i = diamondSize; i >= 0; i--) {
             if (i % 2 != 0) {
@@ -18,6 +17,7 @@ public class Main {
         }
     }
 
+    // printing method works on upper and lower half
     public static void printDiamond(int i) {
         int x = (diamondSize - i) / 2;
         for (int z = 0; z <= x; z++) {
