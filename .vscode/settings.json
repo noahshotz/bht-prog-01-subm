@@ -1,6 +1,8 @@
 {
     "java.project.sourcePaths": [
+        "subm-09",
         "subm-08",
-        "subm-09"
+        "flugzeuge",
+        "arraysort"
     ]
 }
